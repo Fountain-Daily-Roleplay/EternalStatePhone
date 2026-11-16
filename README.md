@@ -123,3 +123,9 @@ Gamemode Crystal Pride saat ini memuat `https://fountain-daily-roleplay.github.i
 
 ## EternalStatePhone deployment
 Gamemode browser URL: https://fountain-daily-roleplay.github.io/EternalStatePhone/. The Crystal Pride source uses this URL in gamemodes/Servers/CEF.pwn; the compiled server gamemode is gamemodes/Crystal.amx. Local UI edits in this package do not automatically publish to GitHub Pages; publish them to the EternalStatePhone repository for the live URL to serve the same CSS and HTML.
+
+## Integrasi Phone SA-MP tambahan
+- Kontak diminta dari dan disimpan ke sistem SA-MP yang sudah ada (`ContactData` dan tabel `contacts`); penambahan memvalidasi request ID, nomor telepon 1–10 digit, dan batas jumlah kontak yang didukung.
+- Peta meminta koordinat pemain aktif melalui bridge CEF dan menerima balasan JSON. Peta ini menunjukkan posisi karakter saat ini; belum ada navigasi rute atau pelacakan pemain lain.
+- Tombol Bank membuka sistem bank gamemode yang sudah ada. Form transaksi di aplikasi Phone masih demo lokal dan tidak mengirim transfer ke database/game.
+- Panggilan dan SMS memakai route command SA-MP yang sudah tersedia. Chat WhatsApp masih lokal/demo. Keberhasilan compile dan pemeriksaan sintaks tidak menggantikan uji langsung di GTA/SA-MP atau koneksi ke database server live.
