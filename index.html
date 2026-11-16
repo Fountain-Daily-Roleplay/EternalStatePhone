@@ -2,12 +2,13 @@
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <meta name="theme-color" content="#0b1019">
   <meta name="description" content="SD Phone — premium smartphone interface for GTA San Andreas Multiplayer.">
   <meta name="color-scheme" content="dark light">
   <title>Crystal Pride — SD Phone</title>
   <link rel="stylesheet" href="style.css">
+  <script>if(window.cef&&typeof window.cef.emit==='function')document.documentElement.classList.add('cef-runtime');</script>
 <style>.cef-phone-close{position:fixed;z-index:99999;top:max(14px,env(safe-area-inset-top));right:max(14px,env(safe-area-inset-right));width:38px;height:38px;border:1px solid #ffffff55;border-radius:50%;background:#111827dd;color:#fff;font:24px/1 Arial,sans-serif;cursor:pointer;box-shadow:0 4px 16px #0008}</style></head>
 <body><button class="cef-phone-close" id="cefPhoneClose" type="button" aria-label="Tutup phone" title="Tutup phone">×</button>
   <main class="stage">
@@ -54,25 +55,25 @@
             </div>
           </div>
           <div class="apps" id="appGrid">
-            <a class="app" href="#phone"><span class="app-icon"><img src="assets/icons/phone.png" alt=""></span><b>Phone</b></a>
-            <a class="app" href="#messages"><span class="app-icon"><img src="assets/icons/messages.png" alt=""></span><b>Messages</b></a>
-            <a class="app" href="#whatsapp"><span class="app-icon brand-icon"><img src="assets/icons/Whatsapp.png" alt=""></span><b>WhatsApp</b></a>
-            <a class="app" href="#contacts"><span class="app-icon"><img src="assets/icons/contacts.png" alt=""></span><b>Contacts</b></a>
-            <a class="app" href="#bank"><span class="app-icon"><img src="assets/icons/bank.png" alt=""></span><b>Bank</b></a>
-            <a class="app" href="#camera"><span class="app-icon"><img src="assets/icons/camera.png" alt=""></span><b>Camera</b></a>
-            <a class="app" href="#maps"><span class="app-icon"><img src="assets/icons/maps.png" alt=""></span><b>Maps</b></a>
-            <a class="app" href="#settings"><span class="app-icon"><img src="assets/icons/settings.png" alt=""></span><b>Settings</b></a>
-            <a class="app" href="#store"><span class="app-icon"><img src="assets/icons/store.png" alt=""></span><b>App Store</b></a>
-            <a class="app" href="#youtube"><span class="app-icon brand-icon"><img src="assets/icons/youtube.png" alt="YouTube"></span><b>YouTube</b></a>
-            <a class="app" href="#instagram"><span class="app-icon brand-icon"><img src="assets/icons/instagram.png" alt="Instagram"></span><b>Instagram</b></a>
-            <a class="app" href="#x-app"><span class="app-icon brand-icon"><img src="assets/icons/x.png" alt="X"></span><b>X</b></a>
+            <a class="app" href="#phone"><span class="app-icon"><img src="assets/icons/phone.svg" alt=""></span><b>Phone</b></a>
+            <a class="app" href="#messages"><span class="app-icon"><img src="assets/icons/messages.svg" alt=""></span><b>Messages</b></a>
+            <a class="app" href="#whatsapp"><span class="app-icon brand-icon"><img src="assets/icons/Whatsapp.svg" alt=""></span><b>WhatsApp</b></a>
+            <a class="app" href="#contacts"><span class="app-icon"><img src="assets/icons/contacts.svg" alt=""></span><b>Contacts</b></a>
+            <a class="app" href="#bank"><span class="app-icon"><img src="assets/icons/bank.svg" alt=""></span><b>Bank</b></a>
+            <a class="app" href="#camera"><span class="app-icon"><img src="assets/icons/camera.svg" alt=""></span><b>Camera</b></a>
+            <a class="app" href="#maps"><span class="app-icon"><img src="assets/icons/maps.svg" alt=""></span><b>Maps</b></a>
+            <a class="app" href="#settings"><span class="app-icon"><img src="assets/icons/settings.svg" alt=""></span><b>Settings</b></a>
+            <a class="app" href="#store"><span class="app-icon"><img src="assets/icons/store.svg" alt=""></span><b>App Store</b></a>
+            <a class="app" href="#youtube"><span class="app-icon brand-icon"><img src="assets/icons/youtube.svg" alt="YouTube"></span><b>YouTube</b></a>
+            <a class="app" href="#instagram"><span class="app-icon brand-icon"><img src="assets/icons/instagram.svg" alt="Instagram"></span><b>Instagram</b></a>
+            <a class="app" href="#x-app"><span class="app-icon brand-icon"><img src="assets/icons/x.svg" alt="X"></span><b>X</b></a>
           </div><div class="app-page-dots" id="appPageDots"></div>
           <label class="home-search-pill" aria-label="Cari aplikasi"><span class="search-icon-wrap"><svg class="ui-icon ui-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span><input id="homeAppSearch" type="search" placeholder="Search" autocomplete="off"></label>
           <div class="dock" aria-label="Aplikasi sosial">
-            <a href="#instagram" aria-label="Instagram"><img src="assets/icons/instagram.png" alt=""></a>
-            <a href="#whatsapp" aria-label="WhatsApp"><img src="assets/icons/Whatsapp.png" alt=""></a>
-            <a href="#x-app" aria-label="X"><img src="assets/icons/x.png" alt=""></a>
-            <a href="#youtube" aria-label="YouTube"><img src="assets/icons/youtube.png" alt=""></a>
+            <a href="#instagram" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt=""></a>
+            <a href="#whatsapp" aria-label="WhatsApp"><img src="assets/icons/Whatsapp.svg" alt=""></a>
+            <a href="#x-app" aria-label="X"><img src="assets/icons/x.svg" alt=""></a>
+            <a href="#youtube" aria-label="YouTube"><img src="assets/icons/youtube.svg" alt=""></a>
           </div>
         </section>
 
@@ -137,7 +138,7 @@
           </div>
         </section>
 
-        <section class="view app-view" id="contacts"><header><a href="#home">‹</a><div><small>PEOPLE</small><h2>Contacts</h2></div><button class="header-dot" id="contactsAdd" type="button" aria-label="Tambah kontak">＋</button></header><label class="search"><span class="search-icon-wrap"><svg class="ui-icon ui-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span><input id="contactsSearch" type="search" placeholder="Cari kontak"></label><div class="contact-list"><article data-contact-name="John Miller"><div class="contact-avatar blue">JM</div><div><b>John Miller</b><p>555-0134</p><div class="contact-actions"><a href="#phone" data-contact-call="555-0134">CALL</a><a href="#messages" data-contact-message="John Miller|555-0134">MESSAGE</a></div></div></article><article data-contact-name="Anna Smith"><div class="contact-avatar violet">AS</div><div><b>Anna Smith</b><p>555-0198</p><div class="contact-actions"><a href="#phone" data-contact-call="555-0198">CALL</a><a href="#messages" data-contact-message="Anna Smith|555-0198">MESSAGE</a></div></div></article><article data-contact-name="David Parker"><div class="contact-avatar orange">DP</div><div><b>David Parker</b><p>555-0112</p><div class="contact-actions"><a href="#phone" data-contact-call="555-0112">CALL</a><a href="#messages" data-contact-message="David Parker|555-0112">MESSAGE</a></div></div></article><article data-contact-name="Emergency Services"><div class="contact-avatar teal">ER</div><div><b>Emergency Services</b><p>911</p></div></article></div></section>
+        <section class="view app-view" id="contacts"><header><a href="#home">‹</a><div><small>PEOPLE</small><h2>Contacts</h2></div><button class="header-dot" id="contactsManage" type="button" aria-label="Kontak tersimpan di server">☷</button><button class="header-dot" id="contactsAdd" type="button" aria-label="Tambah kontak tersimpan">＋</button></header><label class="search"><span class="search-icon-wrap"><svg class="ui-icon ui-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span><input id="contactsSearch" type="search" placeholder="Cari kontak"></label><div class="contact-list"><article data-contact-name="John Miller"><div class="contact-avatar blue">JM</div><div><b>John Miller</b><p>555-0134</p><div class="contact-actions"><a href="#phone" data-contact-call="555-0134">CALL</a><a href="#messages" data-contact-message="John Miller|555-0134">MESSAGE</a></div></div></article><article data-contact-name="Anna Smith"><div class="contact-avatar violet">AS</div><div><b>Anna Smith</b><p>555-0198</p><div class="contact-actions"><a href="#phone" data-contact-call="555-0198">CALL</a><a href="#messages" data-contact-message="Anna Smith|555-0198">MESSAGE</a></div></div></article><article data-contact-name="David Parker"><div class="contact-avatar orange">DP</div><div><b>David Parker</b><p>555-0112</p><div class="contact-actions"><a href="#phone" data-contact-call="555-0112">CALL</a><a href="#messages" data-contact-message="David Parker|555-0112">MESSAGE</a></div></div></article><article data-contact-name="Emergency Services"><div class="contact-avatar teal">ER</div><div><b>Emergency Services</b><p>911</p></div></article></div></section>
 
         <section class="view app-view" id="bank"><header><a href="#home">‹</a><div><small>SA FINANCIAL · DEMO</small><h2>Banking</h2></div><span class="header-dot">•••</span></header><div class="bank-card"><small>SA BANK · SIMULASI LOKAL</small><div class="chip">▦</div><strong id="bankBalance">$24,850.00</strong><span>DEMO BALANCE · BUKAN UANG NYATA</span><div class="card-bottom">CITIZEN ACCOUNT <b>•••• 2048</b></div></div><form class="bank-form" id="bankForm"><label><span>Aksi</span><select id="bankAction"><option value="transfer">Transfer</option><option value="deposit">Deposit</option><option value="withdraw">Withdraw</option></select></label><label><span>Jumlah $</span><input id="bankAmount" type="number" min="1" max="1000000" step="1" placeholder="Jumlah" required></label><label id="bankRecipientField"><span>Tujuan transfer</span><input id="bankRecipient" maxlength="32" placeholder="Nama pemain"></label><button type="submit">Proses demo</button></form><p class="bank-status" id="bankStatus" aria-live="polite">Transaksi hanya mengubah simulasi pada perangkat ini.</p><div class="section-head"><b>Recent activity</b><small>LOKAL</small></div><div id="bankTransactions"><div class="transaction"><span class="tx-icon">↙</span><div><b>ATM Withdrawal</b><small>Market Street · Today</small></div><strong class="negative">-$250</strong></div><div class="transaction"><span class="tx-icon">↗</span><div><b>Salary Deposit</b><small>Employment · Yesterday</small></div><strong class="positive">+$1,500</strong></div></div></section>
 
@@ -166,13 +167,14 @@
           <details><summary><span class="setting-icon">⌁</span><span>Layar & rotasi</span><b>Otomatis</b></summary><p>Mode layar penuh tersedia saat video YouTube sedang diputar.</p><button class="setting-action" id="settingsLandscape" type="button">Buka YouTube</button></details>
           <details><summary><span class="setting-icon">Aa</span><span>Font</span><b id="fontSettingLabel">Plus Jakarta Sans</b></summary><p>Pilih gaya tulisan antarmuka.</p><select class="setting-action" id="fontChoice" aria-label="Pilih font"><option value="Plus Jakarta Sans">Plus Jakarta Sans</option><option value="Sora">Sora</option><option value="Manrope">Manrope</option><option value="Urbanist">Urbanist</option><option value="Space Grotesk">Space Grotesk</option><option value="Outfit">Outfit</option><option value="DM Sans">DM Sans</option><option value="system">System</option></select></details>
           <details><summary><span class="setting-icon">⌑</span><span>Baterai</span><b>100%</b></summary><p>Status baterai untuk pratinjau phone.</p><div class="battery-meter"><i></i></div></details>
+          <details><summary><span class="setting-icon">⏻</span><span>Daya perangkat</span><b>Kontrol</b></summary><p>Matikan layar phone. Tekan tombol power di sisi kanan perangkat untuk menyalakan kembali.</p><button class="setting-action setting-power-action" id="settingsPowerOff" type="button"><span aria-hidden="true">⏻</span> Matikan Phone</button></details>
           <details><summary><span class="setting-icon">ⓘ</span><span>Tentang perangkat</span><b>SD Phone</b></summary><p>SD Phone untuk pratinjau antarmuka GTA SA-MP CEF.</p></details>
         </div></section>
 
-        <section class="view app-view" id="store"><header><a href="#home">‹</a><div><small>DISCOVER</small><h2>App Store</h2></div><span class="header-dot search-icon-wrap"><svg class="ui-icon ui-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span></header><div class="store-banner"><small>FEATURED APPLICATION</small><h3>Make San Andreas<br>more connected.</h3><span>EXPLORE APPS　↗</span></div><div class="section-head"><b>Popular apps</b><small>CURATED</small></div><div class="store-item"><span class="app-icon"><img src="assets/icons/messages.png" alt=""></span><div><b>Messages</b><small>Stay in touch</small></div><a class="store-open" href="#messages">OPEN</a></div><div class="store-item"><span class="app-icon"><img src="assets/icons/Whatsapp.png" alt=""></span><div><b>WhatsApp</b><small>Obrolan demo lokal</small></div><a class="store-open" href="#whatsapp">OPEN</a></div><div class="store-item"><span class="app-icon"><img src="assets/icons/bank.png" alt=""></span><div><b>SA Banking</b><small>Your money, simplified</small></div><a class="store-open" href="#bank">OPEN</a></div>
-          <div class="store-item"><span class="app-icon"><img src="assets/icons/youtube.png" alt=""></span><div><b>YouTube</b><small>Video & entertainment</small></div><a class="store-open" href="#youtube">OPEN</a></div>
-          <div class="store-item"><span class="app-icon"><img src="assets/icons/instagram.png" alt=""></span><div><b>Instagram</b><small>Photos & stories</small></div><a class="store-open" href="#instagram">OPEN</a></div>
-          <div class="store-item"><span class="app-icon"><img src="assets/icons/x.png" alt=""></span><div><b>X</b><small>What's happening</small></div><a class="store-open" href="#x-app">OPEN</a></div></section>
+        <section class="view app-view" id="store"><header><a href="#home">‹</a><div><small>DISCOVER</small><h2>App Store</h2></div><span class="header-dot search-icon-wrap"><svg class="ui-icon ui-search-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span></header><div class="store-banner"><small>FEATURED APPLICATION</small><h3>Make San Andreas<br>more connected.</h3><span>EXPLORE APPS　↗</span></div><div class="section-head"><b>Popular apps</b><small>CURATED</small></div><div class="store-item"><span class="app-icon"><img src="assets/icons/messages.svg" alt=""></span><div><b>Messages</b><small>Stay in touch</small></div><a class="store-open" href="#messages">OPEN</a></div><div class="store-item"><span class="app-icon"><img src="assets/icons/Whatsapp.svg" alt=""></span><div><b>WhatsApp</b><small>Obrolan demo lokal</small></div><a class="store-open" href="#whatsapp">OPEN</a></div><div class="store-item"><span class="app-icon"><img src="assets/icons/bank.svg" alt=""></span><div><b>SA Banking</b><small>Your money, simplified</small></div><a class="store-open" href="#bank">OPEN</a></div>
+          <div class="store-item"><span class="app-icon"><img src="assets/icons/youtube.svg" alt=""></span><div><b>YouTube</b><small>Video & entertainment</small></div><a class="store-open" href="#youtube">OPEN</a></div>
+          <div class="store-item"><span class="app-icon"><img src="assets/icons/instagram.svg" alt=""></span><div><b>Instagram</b><small>Photos & stories</small></div><a class="store-open" href="#instagram">OPEN</a></div>
+          <div class="store-item"><span class="app-icon"><img src="assets/icons/x.svg" alt=""></span><div><b>X</b><small>What's happening</small></div><a class="store-open" href="#x-app">OPEN</a></div></section>
 
 
         <section class="view app-view social-view" id="youtube">
@@ -184,7 +186,7 @@
             <button type="button" data-yt-filter="shorts" role="tab" aria-selected="false">Shorts</button>
             <button type="button" data-yt-filter="music" role="tab" aria-selected="false">Musik</button>
           </div>
-          <div class="yt-tools"><button id="ytShareToFeed" type="button">Bagikan ke feed</button><button id="ytLandscape" type="button" hidden>⛶ Layar penuh</button><small id="ytSearchStatus" aria-live="polite">Rekomendasi untukmu</small></div>
+          <div class="yt-tools"><button id="ytLandscape" type="button" hidden>⛶ Layar penuh</button><small id="ytSearchStatus" aria-live="polite">Rekomendasi untukmu</small></div>
           <div id="ytResults" class="yt-results"></div>
           <div id="ytPlayerWrap" class="yt-player-wrap"><iframe id="ytPlayer" title="Pemutar YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><button id="ytExitLandscape" type="button">Keluar layar penuh ✕</button></div>
           <div class="section-head"><b>Direkomendasikan</b><small>UNTUKMU</small></div>
@@ -205,11 +207,12 @@
         <section class="view app-view social-view" id="instagram">
           <header class="ig-header"><h2 class="ig-wordmark">Instagram</h2><div class="ig-top-actions"><button type="button" id="igRegister" class="ig-account-button" aria-label="Akun Instagram">Akun</button><button type="button" id="igCreate" aria-label="Buat posting">＋</button><button type="button" id="igActivity" class="ig-activity-button" aria-label="Aktivitas">♡</button></div></header>
           <div id="igAuth" hidden><span id="igProfileInitials">CI</span><span id="igProfileName">Citizen</span><span id="igProfileHandle">@citizen</span></div>
-          <form class="ig-post-composer" id="igPostComposer" hidden><textarea id="igCaption" maxlength="220" placeholder="Tulis caption untuk posting lokal" aria-label="Caption posting lokal"></textarea><button type="submit">Bagikan</button></form>
+          <form class="ig-post-composer" id="igPostComposer" hidden><textarea id="igCaption" maxlength="220" placeholder="Tulis caption untuk dibagikan" aria-label="Caption posting"></textarea><button type="submit">Bagikan</button><small id="igPostStatus" role="status" aria-live="polite"></small></form>
           <div class="ig-search-panel" id="igSearchPanel" hidden><input id="igSearchInput" type="search" placeholder="Cari postingan atau akun"></div>
           <div class="ig-profile-strip">
             <button type="button" class="story own" id="igOwnStory"><span class="story-own-avatar" id="igStoryAvatar">＋</span><small id="igStoryLabel">Cerita Anda</small></button><button type="button" class="story"><i class="story-ring">LS</i><small>los.santos</small></button><button type="button" class="story"><i class="story-ring ring-gold">SJ</i><small>sarah.j</small></button><button type="button" class="story"><i class="story-ring ring-blue">SR</i><small>street.racer</small></button>
           </div>
+          <div id="igServerFeed"></div>
           <article class="ig-post">
             <div class="ig-post-head"><span class="ig-avatar">LS</span><b>los.santos.daily</b><span>•••</span></div>
             <div class="ig-photo photo-city"><span>LOS SANTOS</span></div>
@@ -239,7 +242,8 @@
           <div id="xAuth" hidden><span id="xProfileName">Citizen</span><span id="xProfileHandle">@citizen</span></div>
           <div class="x-search-panel" id="xSearchPanel" hidden><input id="xSearchInput" type="search" placeholder="Cari di X"></div>
           <div class="x-tabs" role="tablist" aria-label="Feed X"><button type="button" class="active" data-x-tab="for-you" role="tab" aria-selected="true">Untukmu</button><button type="button" data-x-tab="following" role="tab" aria-selected="false">Mengikuti</button></div>
-          <div class="x-compose"><span class="x-avatar" id="xPlayerInitials">CI</span><div class="x-compose-content"><div class="x-compose-identity"><b id="xComposeName">Citizen</b><small id="xComposeHandle">@citizen</small></div><textarea id="xDraft" placeholder="Apa yang sedang terjadi?" maxlength="280"></textarea><button id="xPostBtn" type="button">Posting</button></div></div>
+          <div class="x-compose"><span class="x-avatar" id="xPlayerInitials">CI</span><div class="x-compose-content"><div class="x-compose-identity"><b id="xComposeName">Citizen</b><small id="xComposeHandle">@citizen</small></div><textarea id="xDraft" placeholder="Apa yang sedang terjadi?" maxlength="280"></textarea><button id="xPostBtn" type="button">Posting</button><small id="xPostStatus" role="status" aria-live="polite"></small></div></div>
+          <div id="xServerFeed"></div>
           <article class="x-post" data-x-topic="news"><div class="x-avatar">LS</div><div><b>Los Santos News <small>@LSNews · 12m</small></b><p>Traffic is building up around Downtown Los Santos. Drive safe, citizens.</p><div class="x-actions"><button class="social-action" data-action="like">♡ 24</button><button class="social-action" data-action="repost">↻ 8</button><button class="social-action" data-action="comment">💬 Reply</button><button class="social-action" data-action="share">↗ Share</button></div></div></article>
           <article class="x-post" data-x-topic="community"><div class="x-avatar x-red">ES</div><div><b>Eternal State RP <small>@EternalState · 1h</small></b><p>Welcome to Eternal State Roleplay. Your story starts here. #ESRP</p><div class="x-actions"><button class="social-action" data-action="like">♡ 56</button><button class="social-action" data-action="repost">↻ 12</button><button class="social-action" data-action="comment">💬 Reply</button><button class="social-action" data-action="share">↗ Share</button></div></div></article>
           <article class="x-post" data-x-topic="network"><div class="x-avatar x-blue">SA</div><div><b>SA Mobile Network <small>@SAMobile · 3h</small></b><p>Network maintenance completed. All systems operational.</p><div class="x-actions"><button class="social-action" data-action="like">♡ 17</button><button class="social-action" data-action="repost">↻ 3</button><button class="social-action" data-action="comment">💬 Reply</button><button class="social-action" data-action="share">↗ Share</button></div></div></article>
@@ -254,7 +258,7 @@
         <div class="social-auth-gate" id="socialAuthGate" data-platform="instagram" data-mode="login" hidden role="dialog" aria-modal="true" aria-labelledby="socialAuthTitle">
           <div class="social-auth-card">
             <div class="social-auth-brand">
-              <img class="social-auth-icon" id="socialAuthIcon" src="assets/icons/instagram.png" alt="">
+              <img class="social-auth-icon" id="socialAuthIcon" src="assets/icons/instagram.svg" alt="">
               <strong id="socialAuthBrand">Instagram</strong>
             </div>
             <small class="social-auth-eyebrow" id="socialAuthEyebrow">AKUN PEMAIN SAN ANDREAS</small>
@@ -299,7 +303,6 @@
           <div class="lock-eyebrow"><span></span> SAN ANDREAS • LOS SANTOS</div>
           <div class="lock-clock-wrap"><div class="lock-clock" id="lockClock">09:41</div><div class="lock-clock-glow"></div></div>
           <div class="lock-glance"><div class="lock-glance-weather"><span class="lock-weather-icon">☼</span><div><b>LOS SANTOS</b><strong>17°</strong><small>Clear skies</small></div></div><div class="lock-glance-divider"></div><div class="lock-glance-date"><b>YOUR DAY</b><strong id="lockDayLabel">SUNDAY</strong><small>Make it count.</small></div></div>
-          <button class="lock-unlock-hint" id="unlockPhoneButton" type="button" aria-label="Buka menu Phone">KETUK / GESER KE ATAS · BUKA MENU</button>
           <div class="lock-bottom">
             <button id="flashBtn" type="button" aria-label="Senter">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8v4l-2 2v11h-4V9L8 7V3Z"/><path d="M9 6h6M10 12h4"/></svg>
@@ -327,14 +330,14 @@
   </main>
  
 <style>
-.lock-screen{position:absolute;inset:0;z-index:1000;pointer-events:auto;touch-action:none;-webkit-user-select:none;user-select:none;display:flex;flex-direction:column;align-items:center;color:#fff;background:var(--phone-wallpaper);transition:opacity .35s,visibility .35s;overflow:hidden}
+.lock-screen{position:absolute;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;color:#fff;background:var(--phone-wallpaper);transition:opacity .35s,visibility .35s;overflow:hidden}
 .lock-screen:before{display:none}
 .lock-screen>*{position:relative;z-index:1}
 .lock-screen.unlocked{opacity:0;visibility:hidden;pointer-events:none}
 .lock-top{width:100%;display:flex;justify-content:flex-end;padding:18px 24px;font-size:10px;font-weight:700}
 .lock-date{margin-top:42px;font-size:13px;font-weight:600;letter-spacing:.25px;text-shadow:0 2px 8px #78294455}
 .lock-clock{font:200 142px/.92 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-10px;color:#ffffffd8;text-shadow:0 2px 18px #772b3d55;transform:scaleX(.82)}
-.lock-unlock-hint{position:absolute;left:18px;right:18px;bottom:104px;min-height:42px;border:1px solid #ffffff38;border-radius:22px;background:#ffffff18;color:#fff;font-size:10px;font-weight:700;letter-spacing:.5px;text-shadow:0 2px 10px #0008;cursor:pointer;pointer-events:auto;touch-action:manipulation}.lock-bottom{position:absolute;left:0;right:0;bottom:42px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 29px}
+.lock-bottom{position:absolute;left:0;right:0;bottom:42px;width:100%;display:flex;align-items:center;justify-content:space-between;padding:0 29px}
 .lock-bottom button{display:grid;place-items:center;width:50px;height:50px;border:1px solid #ffffff3d;border-radius:50%;color:#fff;background:#ffffff30;backdrop-filter:blur(18px);cursor:pointer}
 .lock-bottom svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .yt-search{display:flex;gap:7px;margin:5px 0 8px}.yt-search input{min-width:0;flex:1;border:1px solid #ffffff20;border-radius:22px;background:#ffffff10;color:white;padding:10px 12px;font-size:10px;outline:none}.yt-search button,.yt-tools button{border:0;border-radius:20px;background:#ff0033;color:white;padding:0 12px;font-size:10px;font-weight:700}.yt-tools{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.yt-tools button{background:#ffffff18;color:#fff;padding:8px 10px}.yt-tools small{font-size:8px;color:#aab5c5}.yt-results{display:grid;gap:9px}.yt-result{display:flex;gap:9px;align-items:center;color:#fff;text-decoration:none;font-size:10px}.yt-result img{width:105px;height:60px;object-fit:cover;border-radius:9px}.yt-result small{display:block;color:#9da9bb;margin-top:4px}.yt-player-wrap{display:none;position:relative}.yt-player-wrap iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px}.yt-player-wrap.active{display:block;margin-top:10px}.yt-player-wrap.landscape{position:fixed;inset:0;z-index:50;background:#000;display:flex;align-items:center;justify-content:center;padding:0}.yt-player-wrap.landscape iframe{width:100vw;height:100vh;aspect-ratio:auto;border-radius:0}.yt-player-wrap #ytExitLandscape{display:none}.yt-player-wrap.landscape #ytExitLandscape{display:block;position:absolute;top:15px;right:15px;background:#222;color:#fff;border:0;border-radius:20px;padding:9px}
@@ -342,23 +345,14 @@
 .device:has(.yt-player-wrap.landscape){z-index:99}.screen:has(.yt-player-wrap.landscape){overflow:visible}
 @media(max-width:760px){.stage{padding:15px;min-height:100dvh}.intro{display:none}.device{width:min(390px,96vw);height:min(820px,94dvh);border-radius:42px}.screen{border-radius:34px}.lock-date{margin-top:42px}.lock-clock{font-size:clamp(126px,41vw,160px)}}
 </style>
-<script src="cef-bridge.js"></script>
 <script>
 (() => {
  const lock=document.getElementById('lockScreen');
  let swipeStartY=null;
- const unlock=e=>{if(!lock||lock.classList.contains('unlocked'))return;if(e&&e.target&&e.target.closest&&e.target.closest('.lock-bottom'))return;lock.classList.add('unlocked');const home=document.getElementById('home');if(home){home.style.opacity='1';home.style.visibility='visible';home.style.transform='none';home.style.zIndex='2'}if(location.hash!=='#home')location.hash='#home'};
- const startGesture=e=>{if(!lock||lock.classList.contains('unlocked'))return;swipeStartY=e.touches&&e.touches.length?e.touches[0].clientY:e.clientY};
- const endGesture=e=>{if(swipeStartY===null)return;const y=e.changedTouches&&e.changedTouches.length?e.changedTouches[0].clientY:e.clientY;if(typeof y!=='undefined'&&(swipeStartY-y>20||Math.abs(swipeStartY-y)<=20))unlock(e);swipeStartY=null};
- lock?.addEventListener('click',unlock,true);
- document.getElementById('unlockPhoneButton')?.addEventListener('click',unlock,true);
- lock?.addEventListener('pointerdown',startGesture,{passive:true});
- lock?.addEventListener('pointerup',endGesture,{passive:true});
+ lock?.addEventListener('click',e=>{if(!e.target.closest('.lock-bottom'))lock.classList.add('unlocked')});
+ lock?.addEventListener('pointerdown',e=>{swipeStartY=e.clientY},{passive:true});
+ lock?.addEventListener('pointerup',e=>{if(swipeStartY!==null&&swipeStartY-e.clientY>45)lock.classList.add('unlocked');swipeStartY=null},{passive:true});
  lock?.addEventListener('pointercancel',()=>{swipeStartY=null},{passive:true});
- lock?.addEventListener('touchstart',startGesture,{passive:true});
- lock?.addEventListener('touchend',endGesture,{passive:true});
- lock?.addEventListener('mousedown',startGesture,true);
- lock?.addEventListener('mouseup',endGesture,true);
  document.querySelector('.home-indicator a')?.addEventListener('click',()=>lock?.classList.add('unlocked'));
  document.getElementById('lockCameraBtn')?.addEventListener('click',()=>{lock?.classList.add('unlocked');location.hash='#camera'});
  document.getElementById('flashBtn')?.addEventListener('click',e=>{e.currentTarget.style.background=e.currentTarget.style.background.includes('rgb(255')?'#ffffff28':'#fff';});
@@ -491,10 +485,8 @@
      if(ytStatus)ytStatus.textContent='Coba lagi nanti';
    }
  }
- let ytCurrentVideo=null;
  function play(id,title='Video YouTube'){
    if(!id)return;
-   ytCurrentVideo={id,title};
    exitLandscape();
    player.src='https://www.youtube.com/embed/'+encodeURIComponent(id)+'?autoplay=1&playsinline=1';
    addToYouTubeHistory(id,title);
@@ -674,10 +666,10 @@
    showPage(0);
  }
  const socialAuthApps={
-   instagram:{name:'Instagram',hash:'#instagram',viewId:'instagram',icon:'assets/icons/instagram.png',loginDescription:'Bagikan momen dan cerita bersama komunitas San Andreas.',registerDescription:'Buat profil foto yang terhubung ke akun pemain SA-MP.'},
-   whatsapp:{name:'WhatsApp',hash:'#whatsapp',viewId:'whatsapp',icon:'assets/icons/Whatsapp.png',loginDescription:'Lanjutkan percakapan dan tetap terhubung dengan warga Los Santos.',registerDescription:'Daftarkan akun chat untuk pemain SA-MP yang sedang aktif.'},
-   x:{name:'X',hash:'#x-app',viewId:'x-app',icon:'assets/icons/x.png',loginDescription:'Ikuti kabar terbaru dan percakapan komunitas San Andreas.',registerDescription:'Buat akun untuk membagikan kabar dan bergabung dalam percakapan.'},
-   youtube:{name:'YouTube',hash:'#youtube',viewId:'youtube',icon:'assets/icons/youtube.png',loginDescription:'Masuk untuk melanjutkan ke koleksi dan video pilihanmu.',registerDescription:'Buat profil YouTube yang ditautkan ke pemain SA-MP.'}
+   instagram:{name:'Instagram',hash:'#instagram',viewId:'instagram',icon:'assets/icons/instagram.svg',loginDescription:'Bagikan momen dan cerita bersama komunitas San Andreas.',registerDescription:'Buat profil foto yang terhubung ke akun pemain SA-MP.'},
+   whatsapp:{name:'WhatsApp',hash:'#whatsapp',viewId:'whatsapp',icon:'assets/icons/Whatsapp.svg',loginDescription:'Lanjutkan percakapan dan tetap terhubung dengan warga Los Santos.',registerDescription:'Daftarkan akun chat untuk pemain SA-MP yang sedang aktif.'},
+   x:{name:'X',hash:'#x-app',viewId:'x-app',icon:'assets/icons/x.svg',loginDescription:'Ikuti kabar terbaru dan percakapan komunitas San Andreas.',registerDescription:'Buat akun untuk membagikan kabar dan bergabung dalam percakapan.'},
+   youtube:{name:'YouTube',hash:'#youtube',viewId:'youtube',icon:'assets/icons/youtube.svg',loginDescription:'Masuk untuk melanjutkan ke koleksi dan video pilihanmu.',registerDescription:'Buat profil YouTube yang ditautkan ke pemain SA-MP.'}
  };
  const socialAuthSessions={};
  const socialAuthStatusRequested={};
@@ -801,9 +793,16 @@
    if(registerTab)registerTab.setAttribute('aria-selected',String(socialAuthFormMode==='register'));
    if(socialAuthGate)socialAuthGate.dataset.mode=socialAuthFormMode;
  }
- function emitSocialAuthRequest(eventName,detail){
+ function emitPhoneBridge(eventName,detail){
    window.dispatchEvent(new CustomEvent(eventName,{detail}));
-   if(window.cef&&typeof window.cef.emit==='function')window.cef.emit(eventName,detail);
+   if(window.cef&&typeof window.cef.emit==='function')
+     window.cef.emit('__sdphone_bridge',eventName+' '+encodeURIComponent(JSON.stringify(detail)));
+ }
+ window.crystalPhoneBridge=emitPhoneBridge;
+ function emitSocialAuthRequest(eventName,detail){emitPhoneBridge(eventName,detail)}
+ function requestSocialFeed(platform){
+   if(!['instagram','x','youtube'].includes(platform)||!window.cef||typeof window.cef.emit!=='function')return;
+   emitPhoneBridge('sdphone:social:feed:request',{platform,requestId:'feed-'+Date.now()});
  }
  function refreshSocialAuthButtons(){
    const pending=socialAuthPending[activeSocialPlatform];
@@ -900,6 +899,9 @@
    emitSocialAuthRequest('sdphone:social:auth:request',payload);
  }
  function socialAuthResult(result){
+   if(typeof result==='string'){
+     try{result=JSON.parse(result)}catch(_){return}
+   }
    if(!result||!socialAuthApps[result.platform])return;
    const {platform,action,requestId}=result;
    const pending=socialAuthPending[platform];
@@ -931,6 +933,7 @@
      const handle=String(profile.username||profile.handle||profile.userName||profileHandle(name)).replace(/^@/,'').trim();
      socialAuthSessions[platform]={profile:{name:name||playerDisplayName,handle:handle||profileHandle(playerDisplayName)}};
      renderPlayerProfiles();
+     requestSocialFeed(platform);
      if(activeSocialPlatform===platform){
        hideSocialAuth();
        setSocialAuthStatus('Login berhasil.','success');
@@ -956,6 +959,8 @@
    const username=socialAuthUsername?.value.trim()||'';
    const password=socialAuthPassword?.value||'';
    if(username.length<3){setSocialAuthStatus('Username harus berisi minimal 3 karakter.','error');socialAuthUsername?.focus();return}
+   if(username.length>32||!/^[A-Za-z0-9_.-]+$/.test(username)){setSocialAuthStatus('Username 3–32 karakter: hanya huruf, angka, titik, garis bawah, dan tanda hubung.','error');socialAuthUsername?.focus();return}
+   if(password.length>64||password.includes('|')){setSocialAuthStatus('Password maksimal 64 karakter dan tidak boleh memakai karakter |.','error');socialAuthPassword?.focus();return}
    if(socialAuthFormMode==='register'&&password.length<8){setSocialAuthStatus('Password akun aplikasi harus minimal 8 karakter.','error');socialAuthPassword?.focus();return}
    if(!password){setSocialAuthStatus('Masukkan password akun aplikasi.','error');socialAuthPassword?.focus();return}
    requestSocialAuth(activeSocialPlatform,socialAuthFormMode,{username,password});
@@ -969,13 +974,12 @@
  document.getElementById('waAccount')?.addEventListener('click',()=>showSocialAuth('whatsapp',true));
  document.getElementById('ytAccount')?.addEventListener('click',()=>showSocialAuth('youtube',true));
  window.addEventListener('hashchange',handleSocialRoute);
- window.addEventListener('hashchange',()=>{const p=location.hash==='#instagram'?'instagram':location.hash==='#x-app'?'x':location.hash==='#youtube'?'youtube':null;if(p)setTimeout(()=>requestSocialFeed(p),50)});
  listenGame('sdphone:player:identity',setPlayerIdentity);
  listenGame('sdphone:social:auth:result',socialAuthResult);
  window.addEventListener('sdphone:social:auth:open',event=>showSocialAuth(event.detail?.platform,event.detail?.manage));
  renderPlayerProfiles();
  handleSocialRoute();
- if(typeof window.cef?.emit==='function')window.cef.emit('sdphone:player:identity:request');
+ if(typeof window.cef?.emit==='function')emitPhoneBridge('sdphone:player:identity:request',{});
  window.__sdPhoneSocialAuthResult=socialAuthResult;
 
  function createAction(label,action){
@@ -986,28 +990,6 @@
    button.textContent=label;
    return button;
  }
- const socialFeedSeq=()=>`feed-${Date.now()}-${Math.random().toString(36).slice(2,8)}`;
- function requestSocialFeed(platform){if(socialAuthSessions[platform]&&window.cef?.emit)window.cef.emit('sdphone:social:feed:request',{platform,requestId:socialFeedSeq()})}
- function createSocialPost(platform,body,postType='text',externalId=''){
-   if(!socialAuthSessions[platform]){showSocialAuth(platform);return false}
-   if(!window.cef?.emit){notify('Feed sosial','Bridge Phone CEF belum tersedia.','!','error');return false}
-   window.cef.emit('sdphone:social:post:create',{platform,requestId:socialFeedSeq(),body,postType,externalId});notify('Posting','Mengirim ke server SA-MP…','↗');return true;
- }
- function renderSocialFeed(data){
-   if(!data||!Array.isArray(data.posts))return;
-   const platform=data.platform, first=platform==='instagram'?document.querySelector('#instagram .ig-post'):platform==='x'?document.querySelector('#x-app .x-post'):null, container=platform==='youtube'?document.getElementById('ytResults'):first?.parentElement;
-   if(!container)return;
-   data.posts.forEach(item=>{if(container.querySelector(`[data-social-post-id="${CSS.escape(String(item.id))}"]`))return;
-     const post=document.createElement('article');post.dataset.socialPostId=String(item.id);post.dataset.socialPlatform=platform;
-     if(platform==='youtube'){const button=document.createElement('button');button.className='yt-result';button.type='button';const title=document.createElement('b');title.textContent=item.body;const channel=document.createElement('small');channel.textContent=' @'+(item.username||'Player');button.append(title,channel);button.addEventListener('click',()=>{if(item.externalId)play(item.externalId,item.body)});post.append(button);post.className='yt-feed-post'}
-     else if(platform==='instagram'){post.className='ig-post';const head=document.createElement('div');head.className='ig-post-head';const author=document.createElement('b');author.textContent=item.username||'Player';head.append(author);const photo=document.createElement('div');photo.className='ig-user-post';const text=document.createElement('p');text.textContent=item.body;photo.append(text);const actions=document.createElement('div');actions.className='ig-actions';actions.append(createAction((item.liked?'♥ ':'♡ ')+String(item.likes||0),'like'));post.append(head,photo,actions)}
-     else{post.className='x-post';const body=document.createElement('div');const author=document.createElement('b');author.textContent='@'+(item.username||'player');const text=document.createElement('p');text.textContent=item.body;const actions=document.createElement('div');actions.className='x-actions';actions.append(createAction((item.liked?'♥ ':'♡ ')+String(item.likes||0),'like'));body.append(author,text,actions);post.append(body)}post.dataset.postId=String(item.id);container.prepend(post);
-   });
- }
- listenGame('sdphone:social:feed:result',renderSocialFeed);
- document.getElementById('ytShareToFeed')?.addEventListener('click',()=>{if(!ytCurrentVideo){notify('YouTube','Putar video terlebih dahulu.','▶');return}createSocialPost('youtube',ytCurrentVideo.title,'video',ytCurrentVideo.id)});
- listenGame('sdphone:social:post:result',result=>{if(result?.success){notify('Posting tersimpan','Konten berhasil disimpan di database server.','✓');requestSocialFeed(result.platform)}else notify('Posting gagal','Server menolak penyimpanan posting.','!','error')});
-
  document.getElementById('igCreate')?.addEventListener('click',()=>{
    const composer=document.getElementById('igPostComposer');
    if(!composer)return;
@@ -1019,8 +1001,12 @@
    const captionInput=document.getElementById('igCaption');
    const caption=captionInput?.value.trim();
    if(!caption)return;
-   if(!createSocialPost('instagram',caption,'image'))return;
-   captionInput.value='';event.currentTarget.hidden=true;return;
+   if(window.cef&&typeof window.cef.emit==='function'){
+     const profile=getSocialProfile('ig');
+     window.crystalPhoneBridge?.('sdphone:social:post:create',{platform:'instagram',requestId:'post-'+Date.now(),body:caption,postType:'text',externalId:''});
+     const status=document.getElementById('igPostStatus');if(status)status.textContent='Mengirim posting ke server…';
+     return;
+   }
    const post=document.createElement('article');
    post.className='ig-post';
    const head=document.createElement('div');
@@ -1052,8 +1038,11 @@
    const draft=document.getElementById('xDraft');
    const text=draft?.value.trim();
    if(!text)return;
-   if(!createSocialPost('x',text,'text'))return;
-   draft.value='';return;
+   if(window.cef&&typeof window.cef.emit==='function'){
+     window.crystalPhoneBridge?.('sdphone:social:post:create',{platform:'x',requestId:'post-'+Date.now(),body:text,postType:'text',externalId:''});
+     const status=document.getElementById('xPostStatus');if(status)status.textContent='Mengirim post ke server…';
+     return;
+   }
    const post=document.createElement('article');
    post.className='x-post';
    const avatar=document.createElement('span');
@@ -1077,6 +1066,52 @@
    draft.value='';
  });
 
+ function parseBridgeJson(value){if(typeof value==='string'){try{return JSON.parse(value)}catch(_){return null}}return value&&typeof value==='object'?value:null}
+ function renderServerSocialFeed(data){
+   const platform=data.platform;
+   const root=platform==='instagram'?document.getElementById('igServerFeed'):platform==='x'?document.getElementById('xServerFeed'):null;
+   if(!root)return;
+   root.replaceChildren();
+   document.querySelectorAll(platform==='instagram'?'#instagram > .ig-post':'#x-app > .x-post').forEach(node=>node.remove());
+   (Array.isArray(data.posts)?data.posts:[]).forEach(item=>{
+     const post=document.createElement('article');post.dataset.serverPost='true';post.dataset.postId=String(item.id||'');post.dataset.platform=platform;
+     const handle=String(item.username||'Citizen');const text=String(item.body||'');
+     if(platform==='instagram'){
+       post.className='ig-post';const head=document.createElement('div');head.className='ig-post-head';const avatar=document.createElement('span');avatar.className='ig-avatar';avatar.textContent=profileInitials(handle);const author=document.createElement('b');author.textContent=handle;head.append(avatar,author);
+       const image=document.createElement('div');image.className='ig-user-post';const copy=document.createElement('p');copy.textContent=text;image.append(copy);
+       const actions=document.createElement('div');actions.className='ig-actions';const like=createAction((item.liked?'♥ ':'♡ ')+String(item.likes||0),'like');if(item.liked)like.classList.add('liked');actions.append(like);
+       const caption=document.createElement('p');const capAuthor=document.createElement('b');capAuthor.textContent=handle+' ';caption.append(capAuthor,document.createTextNode(text));post.append(head,image,actions,caption);
+     }else{
+       post.className='x-post';const avatar=document.createElement('div');avatar.className='x-avatar';avatar.textContent=profileInitials(handle);const body=document.createElement('div');const title=document.createElement('b');title.append(document.createTextNode(handle+' '));const meta=document.createElement('small');meta.textContent='@'+handle+' · '+String(item.createdAt||'');title.append(meta);const copy=document.createElement('p');copy.textContent=text;const actions=document.createElement('div');actions.className='x-actions';const like=createAction((item.liked?'♥ ':'♡ ')+String(item.likes||0),'like');if(item.liked)like.classList.add('liked');actions.append(like,createAction('Balas','comment'),createAction('Bagikan','share'));body.append(title,copy,actions);post.append(avatar,body);
+     }
+     root.append(post);
+   });
+ }
+ const pendingSocialWrites={};
+ function handleSocialPostResult(value){
+   const data=parseBridgeJson(value);if(!data||!data.platform)return;
+   if(data.operation==='create'&&data.success){
+     const status=document.getElementById(data.platform==='instagram'?'igPostStatus':'xPostStatus');if(status)status.textContent='Post berhasil tersimpan di server.';
+     if(data.platform==='instagram'){const field=document.getElementById('igCaption');if(field)field.value='';const form=document.getElementById('igPostComposer');if(form)form.hidden=true}
+     else {const field=document.getElementById('xDraft');if(field)field.value=''}
+     window.crystalPhoneBridge?.('sdphone:social:feed:request',{platform:data.platform,requestId:'feed-'+Date.now()});
+   }else if(data.operation==='create'){
+     const status=document.getElementById(data.platform==='instagram'?'igPostStatus':'xPostStatus');if(status)status.textContent='Post gagal disimpan. Periksa migrasi database.';
+   }else if(data.operation==='like'||data.operation==='unlike')window.crystalPhoneBridge?.('sdphone:social:feed:request',{platform:data.platform,requestId:'feed-'+Date.now()});
+   else if(data.operation==='comment'){
+     const pending=pendingSocialWrites[data.requestId];delete pendingSocialWrites[data.requestId];
+     if(data.success&&pending){const post=document.querySelector('[data-server-post][data-post-id="'+pending.postId+'"]');if(post){const reply=document.createElement('p');reply.className='social-reply';const author=document.createElement('b');author.textContent=getSocialProfile(pending.platform==='instagram'?'ig':'x').handle+' ';reply.append(author,document.createTextNode(pending.body));post.append(reply)}}
+     notify(data.success?'Komentar tersimpan':'Komentar gagal',data.success?'Komentar tersimpan di server.':'Pastikan migrasi feed sosial sudah dijalankan.','▢');
+   }
+ }
+ function handleSocialFeedResult(value){const data=parseBridgeJson(value);if(data&&data.platform)renderServerSocialFeed(data)}
+ window.addEventListener('sdphone:social:post:result',event=>handleSocialPostResult(event.detail));
+ window.addEventListener('sdphone:social:feed:result',event=>handleSocialFeedResult(event.detail));
+ if(window.cef&&typeof window.cef.on==='function'){
+   window.cef.on('sdphone:social:post:result',value=>handleSocialPostResult(value?.detail||value));
+   window.cef.on('sdphone:social:feed:result',value=>handleSocialFeedResult(value?.detail||value));
+ }
+
  const waThreads={
    john:{name:'John Miller',initials:'JM',avatar:'avatar-green',unread:2,favorite:true,messages:[
      {from:'them',text:'Kamu sudah sampai di Los Santos?',time:'09:30'},
@@ -1096,6 +1131,8 @@
  const waMessages=document.getElementById('waMessages');
  const waSearch=document.getElementById('waSearch');
  const waEmpty=document.getElementById('waEmpty');
+ if(window.cef&&typeof window.cef.emit==='function'){const banner=document.querySelector('.wa-local-banner span:nth-child(2)');if(banner)banner.textContent='Chat tersimpan di server SA-MP';}
+ if(window.cef&&typeof window.cef.emit==='function'){const liveList=document.getElementById('waChatList');if(liveList){liveList.replaceChildren();const hint=document.createElement('p');hint.className='wa-empty';hint.textContent='Chat demo dinonaktifkan. Gunakan + untuk memilih kontak dan membuka WhatsApp SA-MP tersimpan.';liveList.append(hint)}}
  let activeWaThread=null;
  let waFilter='all';
  function renderWaMessages(){
@@ -1145,6 +1182,10 @@
    const input=document.getElementById('waMessageInput');
    const text=input?.value.trim();
    if(!text||!activeWaThread)return;
+   if(window.cef&&typeof window.cef.emit==='function'){
+     window.emitCrystalPhoneNativeApp('whatsapp');
+     return;
+   }
    const time=new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
    waThreads[activeWaThread].messages.push({from:'me',text,time});
    const row=document.querySelector('[data-chat="'+activeWaThread+'"]');
@@ -1176,6 +1217,10 @@
    });
  });
  document.getElementById('waNewChat')?.addEventListener('click',()=>{
+   if(window.cef&&typeof window.cef.emit==='function'){
+     window.emitCrystalPhoneNativeApp('whatsapp');
+     return;
+   }
    waList.hidden=false;
    waConversation.hidden=true;
    activeWaThread=null;
@@ -1186,13 +1231,23 @@
    if(!button)return;
    const action=button.dataset.action;
    if(action==='like'){
-     const socialPost=button.closest('[data-social-post-id]');
-     if(socialPost&&window.cef?.emit){window.cef.emit('sdphone:social:post:like',{platform:socialPost.dataset.socialPlatform,postId:socialPost.dataset.socialPostId,requestId:socialFeedSeq()});return}
+     const post=button.closest('[data-server-post]');
+     if(post&&window.cef&&typeof window.cef.emit==='function'){
+       const liked=button.classList.contains('liked');
+       window.crystalPhoneBridge?.('sdphone:social:post:'+(liked?'unlike':'like'),{platform:post.dataset.platform,requestId:'like-'+Date.now(),postId:post.dataset.postId});
+       button.disabled=true;setTimeout(()=>{button.disabled=false},1200);return;
+     }
      button.classList.toggle('liked');
      button.textContent=button.classList.contains('liked')?button.textContent.replace('♡','♥'):button.textContent.replace('♥','♡');
    }else if(action==='comment'){
      const post=button.closest('.ig-post,.x-post');
      if(!post)return;
+     if(window.cef&&post.dataset.serverPost){
+       let form=post.querySelector('.social-reply-form');if(form){form.hidden=!form.hidden;form.querySelector('input')?.focus();return}
+       form=document.createElement('form');form.className='social-reply-form';const input=document.createElement('input');input.type='text';input.maxLength=280;input.placeholder='Tulis komentar';input.setAttribute('aria-label','Komentar');const send=document.createElement('button');send.type='submit';send.textContent='Kirim';form.append(input,send);
+       form.addEventListener('submit',submitEvent=>{submitEvent.preventDefault();const body=input.value.trim();if(!body)return;const requestId='comment-'+Date.now();pendingSocialWrites[requestId]={platform:post.dataset.platform,postId:post.dataset.postId,body};window.crystalPhoneBridge?.('sdphone:social:post:comment',{platform:post.dataset.platform,requestId,postId:post.dataset.postId,body});send.disabled=true;send.textContent='…'});
+       post.append(form);input.focus();return;
+     }
      let form=post.querySelector('.social-reply-form');
      if(form){form.hidden=!form.hidden;form.querySelector('input')?.focus();return}
      form=document.createElement('form');
@@ -1275,6 +1330,10 @@
   const emitGame=(eventName,detail)=>{
     window.dispatchEvent(new CustomEvent(eventName,{detail}));
     if(window.cef&&typeof window.cef.emit==='function')window.cef.emit(eventName,detail);
+  };
+  window.emitCrystalPhoneNativeApp=action=>{
+    window.dispatchEvent(new CustomEvent('crystalPhoneNativeApp',{detail:action}));
+    if(window.cef&&typeof window.cef.emit==='function')window.cef.emit('crystalPhoneNativeApp',action);
   };
   function requestText(title,label,placeholder,optional=false){
     const dialog=document.getElementById('textEntryDialog');
@@ -1555,84 +1614,21 @@
       row.hidden=!row.dataset.contactName.toLowerCase().includes(query);
     });
   });
-  let contactsRequestSequence=0, activeContactsRequest='';
-  const requestServerContacts=()=>{
-    if(!window.cef||typeof window.cef.emit!=='function')return;
-    activeContactsRequest='contacts-'+Date.now()+'-'+(++contactsRequestSequence);
-    emitGame('sdphone:contacts:request',{requestId:activeContactsRequest});
-  };
-  const renderServerContacts=detail=>{
-    if(!detail||detail.requestId!==activeContactsRequest||detail.success!==true||!Array.isArray(detail.contacts))return;
-    const list=document.querySelector('#contacts .contact-list');
-    if(!list)return;
-    list.replaceChildren();
-    detail.contacts.forEach(contact=>{
-      if(!contact||typeof contact.name!=='string'||typeof contact.number!=='string')return;
-      const article=document.createElement('article');
-      article.dataset.contactName=contact.name;
-      const avatar=document.createElement('div');
-      avatar.className='contact-avatar blue';
-      avatar.textContent=contact.name.split(/\s+/).slice(0,2).map(part=>part[0]||'').join('').toUpperCase();
-      const copy=document.createElement('div');
-      const title=document.createElement('b'); title.textContent=contact.name;
-      const phone=document.createElement('p'); phone.textContent=contact.number;
-      const actions=document.createElement('div'); actions.className='contact-actions';
-      const call=document.createElement('a'); call.href='#phone'; call.dataset.contactCall=contact.number; call.textContent='CALL';
-      const message=document.createElement('a'); message.href='#messages'; message.dataset.contactMessage=contact.name+'|'+contact.number; message.textContent='MESSAGE';
-      actions.append(call,message); copy.append(title,phone,actions); article.append(avatar,copy); list.append(article);
-    });
-    if(!list.children.length){
-      const empty=document.createElement('p'); empty.className='contacts-empty'; empty.textContent='Kontak SA-MP Anda belum ada.'; list.append(empty);
-    }
-  };
-  const contactAddResult=detail=>{
-    if(!detail||typeof detail!=='object')return;
-    notify('Kontak',String(detail.message|| (detail.success?'Kontak tersimpan.':'Gagal menyimpan kontak.')),'☎',detail.success?'notice':'error');
-    if(detail.success===true)requestServerContacts();
-  };
-  window.addEventListener('sdphone:contacts:result',event=>renderServerContacts(event.detail));
-  window.addEventListener('sdphone:contacts:add:result',event=>contactAddResult(event.detail));
-  if(window.cef&&typeof window.cef.on==='function'){
-    window.cef.on('sdphone:contacts:result',value=>renderServerContacts(value?.detail||value));
-    window.cef.on('sdphone:contacts:add:result',value=>contactAddResult(value?.detail||value));
-  }
-  window.addEventListener('hashchange',()=>{if(location.hash==='#contacts')requestServerContacts()});
-  if(location.hash==='#contacts')requestServerContacts();
-  document.getElementById('contactsAdd')?.addEventListener('click',async()=>{
-    const name=await requestText('Kontak baru','Nama kontak','Nama pemain');
-    if(!name)return;
-    const number=await requestText('Nomor kontak','Nomor telepon','Nomor telepon (opsional)',true);
-    if(number===null)return;
-    const contactName=name.replace(/\|/g,'').slice(0,31);
+  document.getElementById('contactsAdd')?.addEventListener('click',()=>{
     if(window.cef&&typeof window.cef.emit==='function'){
-      if(!/^\d{1,10}$/.test(number.trim())){
-        notice('Kontak','Masukkan nomor telepon SA-MP berupa 1–10 digit.','☎','error');
-        return;
-      }
-      const requestId='contact-add-'+Date.now()+'-'+(++contactsRequestSequence);
-      emitGame('sdphone:contacts:add',{requestId,name:contactName,number:number.trim()});
-      notice('Kontak','Permintaan simpan kontak dikirim ke server.','☎');
+      window.emitCrystalPhoneNativeApp('contact_add');
       return;
     }
-    const row=document.createElement('article');
-    row.dataset.contactName=contactName;
-    const avatar=document.createElement('div');
-    avatar.className='contact-avatar blue';
-    avatar.textContent=contactName.split(/\s+/).slice(0,2).map(part=>part[0]).join('').toUpperCase();
-    const copy=document.createElement('div');
-    const title=document.createElement('b');
-    title.textContent=contactName;
-    const phone=document.createElement('p');
-    phone.textContent=number.trim().slice(0,24);
-    const actions=document.createElement('div');
-    actions.className='contact-actions';
-    actions.innerHTML='<a href="#phone" data-contact-call="">CALL</a><a href="#messages" data-contact-message="">MESSAGE</a>';
-    actions.querySelector('[data-contact-call]').dataset.contactCall=phone.textContent;
-    actions.querySelector('[data-contact-message]').dataset.contactMessage=contactName+'|'+phone.textContent;
-    copy.append(title,phone,actions);
-    row.append(avatar,copy);
-    document.querySelector('#contacts .contact-list')?.append(row);
+    notice('Kontak SA-MP','Buka phone CEF di dalam game untuk menyimpan kontak ke server.','+');
   });
+  document.getElementById('contactsManage')?.addEventListener('click',()=>{
+    if(window.cef&&typeof window.cef.emit==='function')window.emitCrystalPhoneNativeApp('contacts');
+    else notice('Kontak SA-MP','Daftar kontak live tersedia di dalam game.','▤');
+  });
+  if(window.cef&&typeof window.cef.emit==='function'){
+    const contactList=document.querySelector('#contacts .contact-list');
+    if(contactList){contactList.replaceChildren();const hint=document.createElement('p');hint.className='messages-empty';hint.textContent='Gunakan ikon daftar untuk melihat kontak tersimpan di server atau + untuk menambah.';contactList.append(hint)}
+  }
   document.getElementById('contacts')?.addEventListener('click',event=>{
     const call=event.target.closest('[data-contact-call]');
     const message=event.target.closest('[data-contact-message]');
@@ -1651,18 +1647,24 @@
   const bankBalanceNode=document.getElementById('bankBalance');
   const bankAction=document.getElementById('bankAction');
   const bankRecipient=document.getElementById('bankRecipientField');
-  const bankServerButton=document.createElement('button');
-  bankServerButton.type='button';
-  bankServerButton.className='setting-action';
-  bankServerButton.textContent='Buka sistem bank SA-MP';
-  document.querySelector('#bank .bank-form')?.after(bankServerButton);
-  bankServerButton.addEventListener('click',()=>{
-    if(window.cef&&typeof window.cef.emit==='function')emitGame('crystalPhoneNativeApp','bank');
-    else notice('Bank SA-MP','Fitur ini hanya tersedia saat Phone terhubung ke server game.','▦','error');
-  });
+  if(window.cef&&typeof window.cef.emit==='function'){
+    const bankEyebrow=document.querySelector('#bank header small');if(bankEyebrow)bankEyebrow.textContent='SA-MP · SERVER';
+    const bankBrand=document.querySelector('.bank-card small');if(bankBrand)bankBrand.textContent='SA BANK · AKUN SERVER';
+    const bankBalanceLabel=document.querySelector('.bank-card>span');if(bankBalanceLabel)bankBalanceLabel.textContent='SALDO AKTUAL DITAMPILKAN DI DIALOG SERVER';
+    if(bankBalanceNode)bankBalanceNode.textContent='Saldo dikelola server';
+    const activity=document.getElementById('bankTransactions');
+    if(activity){activity.replaceChildren();const hint=document.createElement('p');hint.className='messages-empty';hint.textContent='Riwayat dan saldo aktual tampil melalui dialog bank SA-MP.';activity.append(hint)}
+    const button=document.querySelector('#bankForm button[type="submit"]');if(button)button.textContent='Lanjut ke bank SA-MP';
+  }
   bankAction?.addEventListener('change',()=>{if(bankRecipient)bankRecipient.hidden=bankAction.value!=='transfer'});
   document.getElementById('bankForm')?.addEventListener('submit',event=>{
     event.preventDefault();
+    if(window.cef&&typeof window.cef.emit==='function'){
+      window.emitCrystalPhoneNativeApp('bank');
+      const status=document.getElementById('bankStatus');
+      if(status)status.textContent='Membuka transaksi bank SA-MP. Pastikan berada di lokasi bank.';
+      return;
+    }
     const amount=Number(document.getElementById('bankAmount').value);
     const action=bankAction?.value||'transfer';
     const recipient=document.getElementById('bankRecipient')?.value.trim();
@@ -1739,8 +1741,8 @@
   document.getElementById('mapLocate')?.addEventListener('click',()=>{
     const status=document.getElementById('mapLocationStatus');
     if(window.cef&&typeof window.cef.emit==='function'){
-      if(status)status.textContent='Mengambil posisi karakter dari SA-MP…';
-      emitGame('crystalPhoneNativeApp','map_location');
+      if(status)status.textContent='Meminta posisi aktual pemain dari server…';
+      window.emitCrystalPhoneNativeApp('map_location');
       return;
     }
     if(!navigator.geolocation){
@@ -1757,14 +1759,14 @@
       if(status)status.textContent=error.message||'Izin lokasi ditolak; lokasi demo tetap digunakan.';
     },{enableHighAccuracy:true,timeout:8000,maximumAge:30000});
   });
-  const renderServerMapLocation=detail=>{
-    if(!detail||!Number.isFinite(Number(detail.x))||!Number.isFinite(Number(detail.y))||!Number.isFinite(Number(detail.z)))return;
-    const coords=`X ${Number(detail.x).toFixed(2)} · Y ${Number(detail.y).toFixed(2)} · Z ${Number(detail.z).toFixed(2)}`;
-    document.getElementById('mapLocation').textContent=coords;
+  if(window.cef&&typeof window.cef.on==='function')window.cef.on('sdphone:map:server_location',payload=>{
+    const values=String(payload||'').split('|');
+    if(values.length<5)return;
+    const point=document.getElementById('mapLocation');
     const status=document.getElementById('mapLocationStatus');
-    if(status)status.textContent=`LOKASI KARAKTER SA-MP · WORLD ${Number(detail.virtualWorld)||0} · INTERIOR ${Number(detail.interior)||0}`;
-  };
-  if(window.cef&&typeof window.cef.on==='function')window.cef.on('sdphone:map:server_location',value=>renderServerMapLocation(value?.detail||value));
+    if(point)point.textContent=`X ${values[0]} · Y ${values[1]} · Z ${values[2]}`;
+    if(status)status.textContent=`POSISI SERVER · VIRTUAL WORLD ${values[3]} · INTERIOR ${values[4]}`;
+  });
   document.getElementById('mapOpen')?.addEventListener('click',()=>{
     const point=document.getElementById('mapLocation')?.textContent||'Los Santos, San Andreas';
     const url='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(point);
@@ -1932,6 +1934,11 @@
   waAttachment?.addEventListener('change',()=>{
     const file=waAttachment.files?.[0];
     if(!file)return;
+    if(window.cef&&typeof window.cef.emit==='function'){
+      notice('Lampiran WhatsApp','Lampiran gambar belum didukung oleh backend SA-MP.','＋');
+      waAttachment.value='';
+      return;
+    }
     if(!file.type.startsWith('image/')||file.size>5*1024*1024){
       notice('Lampiran','Pilih gambar dengan ukuran maksimal 5 MB.','＋');
       waAttachment.value='';
@@ -1947,6 +1954,7 @@
     waAttachment.value='';
   });
   document.getElementById('waComposer')?.addEventListener('submit',event=>{
+    if(window.cef&&typeof window.cef.emit==='function')return;
     const text=document.getElementById('waMessageInput')?.value.trim();
     if(text)emitGame('sdphone:whatsapp:send',{text});
   },true);
@@ -2004,6 +2012,7 @@
   up?.addEventListener('click',()=>setVolume(5));
   down?.addEventListener('click',()=>setVolume(-5));
   power?.addEventListener('click',()=>setPower(!powered));
+  document.getElementById('settingsPowerOff')?.addEventListener('click',()=>setPower(false));
   document.addEventListener('keydown',e=>{
     if(e.key==='AudioVolumeUp'){e.preventDefault();setVolume(5);}
     if(e.key==='AudioVolumeDown'){e.preventDefault();setVolume(-5);}
