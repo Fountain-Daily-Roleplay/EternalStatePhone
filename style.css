@@ -2522,3 +2522,21 @@ body .stage>.device{
 @media(max-height:560px){
   body .stage>.device{width:min(calc((100dvh - 16px)*356 / 738),calc(100vw - 28px));max-height:calc(100dvh - 16px)}
 }
+
+/* YouTube login-backed sharing and persisted community videos */
+.yt-share-form{display:grid;grid-template-columns:1fr auto;gap:8px;padding:13px;margin:13px 0;border:1px solid #ffffff1e;border-radius:16px;background:linear-gradient(135deg,#ffffff10,#ffffff05);box-shadow:0 10px 26px #0003}
+.yt-share-form>div{grid-column:1/-1;display:grid;gap:3px}
+.yt-share-form>div b{font-size:11px}.yt-share-form>div small,.yt-share-form>small{font-size:8px;color:#9eacbe;line-height:1.45}
+.yt-share-form input{min-width:0;width:100%;height:36px;padding:0 10px;border:1px solid #ffffff20;border-radius:10px;background:#070b12aa;color:#f6f8fc;font-size:9px;outline:none}
+.yt-share-form input:focus{border-color:#ff5366;box-shadow:0 0 0 3px #ff536622}
+.yt-share-form button{grid-column:1/-1;min-height:36px;border:1px solid #ff778755;border-radius:11px;background:linear-gradient(110deg,#ff3d52,#bd182d);color:white;font-size:9px;font-weight:800;letter-spacing:.3px;box-shadow:0 7px 17px #e5233830}
+.yt-share-form>small{grid-column:1/-1;min-height:10px}
+.yt-community-video{display:flex;align-items:center;gap:10px;width:100%;padding:8px;margin:0 0 8px;border:1px solid #ffffff12;border-radius:13px;background:#ffffff08;color:#f4f6fa;text-align:left;cursor:pointer}
+.yt-community-video:active{transform:scale(.985)}
+.yt-community-thumb{position:relative;display:block;width:104px;height:59px;flex:none;overflow:hidden;border-radius:9px;background:#151a24}
+.yt-community-thumb img{width:100%;height:100%;display:block;object-fit:cover}
+.yt-community-thumb i{position:absolute;inset:0;display:grid;place-items:center;color:white;font-style:normal;font-size:15px;text-shadow:0 2px 8px #000}
+.yt-community-copy{min-width:0;display:grid;gap:5px}
+.yt-community-copy b{font-size:9px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.yt-community-copy small,.yt-community-empty{font-size:7px;color:#9eacbe}
+.yt-community-empty{display:block;padding:10px 3px}
