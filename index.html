@@ -188,6 +188,9 @@
           </div>
           <div class="yt-tools"><button id="ytLandscape" type="button" hidden>⛶ Layar penuh</button><small id="ytSearchStatus" aria-live="polite">Rekomendasi untukmu</small></div>
           <div id="ytResults" class="yt-results"></div>
+          <form class="yt-share-form" id="ytShareForm"><div><b>Bagikan video ke komunitas</b><small>Tempel URL atau ID video YouTube</small></div><input id="ytShareUrl" type="text" maxlength="256" placeholder="https://youtu.be/…" autocomplete="off" aria-label="URL video YouTube"><input id="ytShareTitle" type="text" maxlength="120" placeholder="Judul (opsional)" aria-label="Judul video"><button type="submit">Bagikan</button><small id="ytShareStatus" role="status" aria-live="polite"></small></form>
+          <div class="section-head"><b>Video komunitas</b><small>TERSIMPAN DI SERVER</small></div>
+          <div id="ytServerFeed" class="yt-server-feed" aria-live="polite"></div>
           <div id="ytPlayerWrap" class="yt-player-wrap"><iframe id="ytPlayer" title="Pemutar YouTube" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><button id="ytExitLandscape" type="button">Keluar layar penuh ✕</button></div>
           <div class="section-head"><b>Direkomendasikan</b><small>UNTUKMU</small></div>
           <div class="yt-feed">
@@ -493,6 +496,19 @@
    wrap.classList.add('active');syncYoutubeControls();
    wrap.scrollIntoView({behavior:'smooth',block:'nearest'});
  }
+ window.sdPhonePlayYouTube=(id,title)=>play(id,title);
+ document.getElementById('ytShareForm')?.addEventListener('submit',event=>{
+   event.preventDefault();
+   const url=document.getElementById('ytShareUrl');
+   const titleField=document.getElementById('ytShareTitle');
+   const status=document.getElementById('ytShareStatus');
+   const id=parseYouTubeVideoId(url?.value||'');
+   if(!id){if(status)status.textContent='Masukkan URL atau ID video YouTube yang valid.';return}
+   if(typeof window.crystalPhoneBridge!=='function'){if(status)status.textContent='Bridge server SA-MP belum tersedia.';return}
+   const title=(titleField?.value||'').trim()||'Video YouTube dibagikan';
+   window.crystalPhoneBridge('sdphone:social:post:create',{platform:'youtube',requestId:'yt-'+Date.now(),postType:'video',body:title,externalId:id});
+   if(status)status.textContent='Menyimpan video ke server…';
+ });
  document.getElementById('ytSearchForm')?.addEventListener('submit',event=>{event.preventDefault();searchYT()});
  document.querySelectorAll('#youtube [data-yt-filter]').forEach(button=>button.addEventListener('click',()=>{
    ytActiveCategory=button.dataset.ytFilter;
@@ -792,6 +808,7 @@
    if(loginTab)loginTab.setAttribute('aria-selected',String(socialAuthFormMode==='login'));
    if(registerTab)registerTab.setAttribute('aria-selected',String(socialAuthFormMode==='register'));
    if(socialAuthGate)socialAuthGate.dataset.mode=socialAuthFormMode;
+   setSocialAuthStatus(socialAuthFormMode==='register'?'Mode Daftar: buat akun baru untuk platform ini.':'Mode Masuk: gunakan username dan password akun yang sudah terdaftar.','info');
  }
  function emitPhoneBridge(eventName,detail){
    window.dispatchEvent(new CustomEvent(eventName,{detail}));
@@ -961,9 +978,10 @@
    if(username.length<3){setSocialAuthStatus('Username harus berisi minimal 3 karakter.','error');socialAuthUsername?.focus();return}
    if(username.length>32||!/^[A-Za-z0-9_.-]+$/.test(username)){setSocialAuthStatus('Username 3–32 karakter: hanya huruf, angka, titik, garis bawah, dan tanda hubung.','error');socialAuthUsername?.focus();return}
    if(password.length>64||password.includes('|')){setSocialAuthStatus('Password maksimal 64 karakter dan tidak boleh memakai karakter |.','error');socialAuthPassword?.focus();return}
-   if(socialAuthFormMode==='register'&&password.length<8){setSocialAuthStatus('Password akun aplikasi harus minimal 8 karakter.','error');socialAuthPassword?.focus();return}
+   const action=socialAuthGate?.dataset.mode==='register'?'register':'login';
+   if(action==='register'&&password.length<8){setSocialAuthStatus('Password akun aplikasi harus minimal 8 karakter.','error');socialAuthPassword?.focus();return}
    if(!password){setSocialAuthStatus('Masukkan password akun aplikasi.','error');socialAuthPassword?.focus();return}
-   requestSocialAuth(activeSocialPlatform,socialAuthFormMode,{username,password});
+   requestSocialAuth(activeSocialPlatform,action,{username,password});
    if(socialAuthPassword)socialAuthPassword.value='';
  });
  socialAuthButtons.logout?.addEventListener('click',()=>{if(activeSocialPlatform)requestSocialAuth(activeSocialPlatform,'logout')});
@@ -976,7 +994,13 @@
  window.addEventListener('hashchange',handleSocialRoute);
  listenGame('sdphone:player:identity',setPlayerIdentity);
  listenGame('sdphone:social:auth:result',socialAuthResult);
- window.addEventListener('sdphone:social:auth:open',event=>showSocialAuth(event.detail?.platform,event.detail?.manage));
+ function handleSocialAuthOpen(value){
+   let data=value?.detail||value;
+   if(typeof data==='string'){try{data=JSON.parse(data)}catch(_){return}}
+   if(data&&socialAuthApps[data.platform])showSocialAuth(data.platform,data.manage===true);
+ }
+ window.addEventListener('sdphone:social:auth:open',event=>handleSocialAuthOpen(event.detail));
+ if(typeof window.cef?.on==='function')window.cef.on('sdphone:social:auth:open',handleSocialAuthOpen);
  renderPlayerProfiles();
  handleSocialRoute();
  if(typeof window.cef?.emit==='function')emitPhoneBridge('sdphone:player:identity:request',{});
@@ -1069,9 +1093,26 @@
  function parseBridgeJson(value){if(typeof value==='string'){try{return JSON.parse(value)}catch(_){return null}}return value&&typeof value==='object'?value:null}
  function renderServerSocialFeed(data){
    const platform=data.platform;
-   const root=platform==='instagram'?document.getElementById('igServerFeed'):platform==='x'?document.getElementById('xServerFeed'):null;
+   const root=platform==='instagram'?document.getElementById('igServerFeed'):platform==='x'?document.getElementById('xServerFeed'):platform==='youtube'?document.getElementById('ytServerFeed'):null;
    if(!root)return;
    root.replaceChildren();
+   if(platform==='youtube'){
+     (Array.isArray(data.posts)?data.posts:[]).forEach(item=>{
+       const id=String(item.externalId||'');
+       if(!/^[A-Za-z0-9_-]{11}$/.test(id))return;
+       const title=String(item.body||'Video YouTube');
+       const row=document.createElement('button');row.type='button';row.className='yt-community-video';
+       const thumb=document.createElement('span');thumb.className='yt-community-thumb';
+       const image=document.createElement('img');image.src='https://i.ytimg.com/vi/'+id+'/mqdefault.jpg';image.alt='';image.loading='lazy';
+       const playMark=document.createElement('i');playMark.textContent='▶';thumb.append(image,playMark);
+       const copy=document.createElement('span');copy.className='yt-community-copy';
+       const heading=document.createElement('b');heading.textContent=title;
+       const author=document.createElement('small');author.textContent='@'+String(item.username||'Citizen')+' · '+String(item.createdAt||'');copy.append(heading,author);
+       row.append(thumb,copy);row.addEventListener('click',()=>window.sdPhonePlayYouTube?.(id,title));root.append(row);
+     });
+     if(!root.childElementCount){const empty=document.createElement('small');empty.className='yt-community-empty';empty.textContent='Belum ada video komunitas yang dibagikan.';root.append(empty)}
+     return;
+   }
    document.querySelectorAll(platform==='instagram'?'#instagram > .ig-post':'#x-app > .x-post').forEach(node=>node.remove());
    (Array.isArray(data.posts)?data.posts:[]).forEach(item=>{
      const post=document.createElement('article');post.dataset.serverPost='true';post.dataset.postId=String(item.id||'');post.dataset.platform=platform;
@@ -1091,12 +1132,13 @@
  function handleSocialPostResult(value){
    const data=parseBridgeJson(value);if(!data||!data.platform)return;
    if(data.operation==='create'&&data.success){
-     const status=document.getElementById(data.platform==='instagram'?'igPostStatus':'xPostStatus');if(status)status.textContent='Post berhasil tersimpan di server.';
+     const statusId=data.platform==='instagram'?'igPostStatus':data.platform==='youtube'?'ytShareStatus':'xPostStatus';const status=document.getElementById(statusId);if(status)status.textContent=data.platform==='youtube'?'Video berhasil disimpan di server.':'Post berhasil tersimpan di server.';
      if(data.platform==='instagram'){const field=document.getElementById('igCaption');if(field)field.value='';const form=document.getElementById('igPostComposer');if(form)form.hidden=true}
+     else if(data.platform==='youtube'){const url=document.getElementById('ytShareUrl');const title=document.getElementById('ytShareTitle');if(url)url.value='';if(title)title.value=''}
      else {const field=document.getElementById('xDraft');if(field)field.value=''}
      window.crystalPhoneBridge?.('sdphone:social:feed:request',{platform:data.platform,requestId:'feed-'+Date.now()});
    }else if(data.operation==='create'){
-     const status=document.getElementById(data.platform==='instagram'?'igPostStatus':'xPostStatus');if(status)status.textContent='Post gagal disimpan. Periksa migrasi database.';
+     const statusId=data.platform==='instagram'?'igPostStatus':data.platform==='youtube'?'ytShareStatus':'xPostStatus';const status=document.getElementById(statusId);if(status)status.textContent='Simpan gagal. Periksa login dan migrasi database sosial.';
    }else if(data.operation==='like'||data.operation==='unlike')window.crystalPhoneBridge?.('sdphone:social:feed:request',{platform:data.platform,requestId:'feed-'+Date.now()});
    else if(data.operation==='comment'){
      const pending=pendingSocialWrites[data.requestId];delete pendingSocialWrites[data.requestId];
